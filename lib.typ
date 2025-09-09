@@ -9,9 +9,11 @@
   dedication: none,
   acknowledgement: [],
   abstract: [],
+  body-font-size: 11pt,
+  caption-font-size: 11pt,
   doc,
 ) = {
-  set text(size: 11pt)
+  set text(size: body-font-size)
   set par(leading: 1.5em, first-line-indent: 1em, justify: true, spacing: 1.5em)
   set page(
     margin: (x: 1in, y: 1in),
@@ -57,16 +59,20 @@
   }
 
   grid(
-    columns: (1fr),
+    columns: 1fr,
     rows: (1fr, 1fr, 1fr),
     align(center + horizon, text(16pt)[#smallcaps([#title])]),
     align(center + horizon)[#author],
-    align(center + horizon)[Submitted to the Faculty of the Gradute School \ in partial fulfillment of the requirements \ for the degree \ Doctor of Philosophy \ in the Department of #dept, \ Indiana University \ #month #year],
+    align(
+      center + horizon,
+    )[Submitted to the Faculty of the Gradute School \ in partial fulfillment of the requirements \ for the degree \ Doctor of Philosophy \ in the Department of #dept, \ Indiana University \ #month #year],
   )
 
   pagebreak()
 
-  align(center)[Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the requirements for the degree of Doctor of Philosophy.]
+  align(
+    center,
+  )[Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the requirements for the degree of Doctor of Philosophy.]
 
   v(2em)
 
@@ -99,8 +105,8 @@
   }
 
   text(15pt)[#align(center)[
-      *Acknowlegements*
-    ]]
+    *Acknowlegements*
+  ]]
 
   [#acknowledgement]
 
@@ -143,6 +149,14 @@
 
   pagebreak()
 
+  outline(
+    target: figure.where(kind: raw),
+    indent: auto,
+    title: [List of Code Examples],
+  )
+
+  pagebreak()
+
   set page(
     numbering: "1",
     footer: context [
@@ -171,9 +185,10 @@
   }
   show figure.caption: it => {
     set par(leading: 0.65em)
-    set text(size: 11pt)
+    set text(size: caption-font-size)
     emph(it)
   }
+  set figure(gap: 2em)
 
   doc
 }

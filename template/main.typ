@@ -1,4 +1,4 @@
-#import "@preview/modern-iu-thesis:0.1.0": *
+#import "@preview/modern-iu-thesis:0.1.2": *
 
 #show: thesis.with(
   title: [My Thesis],
@@ -48,7 +48,7 @@
 
 === More History
 
-$ delta S &= delta integral cal(L) dif t = 0 $
+$ delta S & = delta integral cal(L) dif t = 0 $
 
 #align(center)[
   #figure(

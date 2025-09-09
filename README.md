@@ -22,6 +22,8 @@ Graduate School. This template provides a couple functions:
     dedication: [content],
     acknowledgement: [content],
     abstract: [content],
+    body-font-size: 11pt,
+    caption-font-size: 11pt,
 )
 ```
 

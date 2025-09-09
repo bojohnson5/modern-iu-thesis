@@ -1,6 +1,6 @@
 [package]
 name = "modern-iu-thesis"
-version = "0.1.0"
+version = "0.1.2"
 entrypoint = "lib.typ"
 authors = ["Bo Johnson"]
 license = "MIT"
